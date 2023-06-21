@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/r2.css">
+    <title>Reto 2</title>
+</head>
+<body>
+    <div class="container">
+    <table border="2px">
+        <thead>
+            <tr>
+                <th>EVENTO</th>
+                <th>EJEMPLO DE APLICACION</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>click</td>
+                <td>
+                    <input type="button" value="Pinchame y verás" onclick="otraFuncion()">
+                <p id="otraFuncion"></p>
+                    <script>
+                        function otraFuncion() {
+                          document.getElementById("otraFuncion").innerHTML += " ♡ :) ";
+                        }
+                    </script>
+                </td>
+            </tr>
+            <tr>
+                <td>blur</td>
+                <td>
+                    <body>
+                    Escribe algo en Mayusculas y pulsa otro lugar: <input type="text" id="fname" onblur="Blur()">
+                    <script>
+                    function Blur() {
+                      let x = document.getElementById("fname");
+                      x.value = x.value.toLowerCase();
+                    }
+                    </script>
+                </body>
+                </td>
+            </tr>
+            <tr>
+                <td>mouseover</td>
+                <td>
+                    <body>
+                        <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src="img/link.png" alt="link" width="32" height="32">
+                        <script>
+                        function bigImg(x) {
+                          x.style.height = "100px";
+                          x.style.width = "100px";
+                        }
+                        function normalImg(x) {
+                          x.style.height = "50px";
+                          x.style.width = "50px";
+                        }
+                        </script> 
+                    </body>
+                </td>
+            </tr>
+            <tr>
+                <td>focus</td>
+                <td>
+                    <body>
+                        ¿Cual es tu Pokemon Favorito? <input type="text" onfocus="FOCUS(this)">
+                        <script>
+                        function FOCUS(x) {
+                          x.style.background = "lightgreen";
+                        }
+                        </script>   
+                    </body>
+                </td>
+            </tr>
+            <tr>
+                <tr>
+                    <td>Dragdrop</td>
+                    <td>
+                        <br>
+                        <div id="dragElement" draggable="true">Elemento Arrastrable</div>
+                        <br>
+                        <div id="dropzone" class="dropzone">Suelta aquí</div>
+                        <br>
+                    </td>
+                  </tr>
+            </tr>
+            <tr>
+                <td>mousemove</td>
+                <td>
+                    <style>
+                    div {
+                      width: 150px;
+                      height: 75px;
+                      border: 1px solid black;
+                    }
+                    </style>
+                    <body>
+                    <div onmousemove="Evento(event)" onmouseout="clearCoor()"></div>
+                    <p id="demo"></p>
+                    <script>
+                    function Evento(e) {
+                      let x = e.clientX;
+                      let y = e.clientY;
+                      let coor = "Coordenadas: (" + x + "," + y + ")";
+                      document.getElementById("demo").innerHTML = coor;
+                    }
+                    function clearCoor() {
+                      document.getElementById("demo").innerHTML = "";
+                    }
+                    </script>
+                    </body>
+                </td>
+            </tr>
+            <tr>
+                <td>keyup</td>
+                <td>
+                    <body>
+                        Escribe tu color Favorito: <input type="text" id="j" onkeyup="up()">
+                        
+                        <script>
+                        function up() {
+                          let a = document.getElementById("j");
+                          a.value = a.value.toUpperCase();
+                        }
+                        </script>
+                    </body>
+                </td>
+            </tr>
+            <tr>
+                <td>dblclick</td>
+                <td>
+                    <input type="button" value="Pincha 2 veces" ondblclick="DBL()" />
+                    <p id="JUANCABALLO"></p>
+                    <script>
+                        function DBL() {
+                          document.getElementById("JUANCABALLO").innerHTML += "¡¡¡Que tengas un Buen dia!!! ";
+                        }
+                    </script>
+                </td>
+            </tr>
+            <tr>
+                <td>scroll</td>
+                <td>
+                    <head>
+                    <style>
+                    div {
+                      border: 1px solid black;
+                      width: 250px;
+                      height: 150px;
+                      overflow: scroll;
+                    }
+                    </style>
+                    </head>
+                    <body>
+                    
+                    <div onscroll="Scroll()">
+                        Los pollitos dicen pio, pio, pio
+                        Cuando tienen hambre, cuando tienen frío
+                        La gallina busca el maíz y el trigo
+                        Les da la comida y les presta abrigo
+                        Bajo sus dos alas, se están quietecitos
+                        Y hasta el otro día, duermen calentitos
+                        Los pollitos dicen pio, pio, pio
+                        Cuando tienen hambre, cuando tienen frío
+                        La gallina busca el maíz y el trigo
+                        Les da la comida y les presta abrigo
+                        Bajo sus dos alas, se están quietecitos
+                        Y hasta el otro día, duermen calentitos
+                    </div>
+                    <p>Scrolled <span id="ola">0</span> times.</p>
+                    <script>
+                    let x = 0;
+                    function Scroll() {
+                      document.getElementById("ola").innerHTML = x += 1;
+                    }
+                    </script>
+                    </body>
+                </td>
+            </tr>
+            <tr>
+                <td>keypress</td>
+                <td>
+                    <body>
+                        <input type="text" onkeypress="press()">  
+                        <script>
+                        function press() {
+                          alert("Tu has presionado una tecla");
+                        }
+                        </script>
+                    </body>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div>
+                        <a href="index.html">Regresar</a>
+                    </div>
+                </td>
+            </tr>   
+        </tbody>
+    </table>
+    </div>
+    <br>
+    <script type="text/JavaScript" src="js/Reto2.js"></script>
+</body>
+</html>

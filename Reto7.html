@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/modal7.css">
+    <title>Reto 7</title>
+</head>
+<body>
+    <form action="" class="caja" id="frmvalidacion"  novalidate>
+        <h1>Formulario de Registro</h1>
+        <div>
+        <label for="tipo"><h4>Tipo de Documento:</h4></label>
+        </div>
+        <select name="tipo" id="tipo" required>
+            <option value="0">-Tipo-</option>
+            <option value="1">TI</option>
+            <option value="2">CC</option>
+            <option value="3">CE</option>
+        </select><br>
+        <div id="inputNumDoc">
+            <label for="no"><h4>No. Documento:</h4></label>
+            <input type="text" id="no" name="no" placeholder="Numero de Documento" class="" >
+            <div class="feedback"></div>
+        </div>
+        <div id="inputNombre">
+            <label for="nombre"><h4>Nombre:</h4></label>
+            <input type="text" id="nombre" name="nombre" placeholder="Escribe tu Nombre" class="" >
+            <div class="feedback"></div>
+        </div>
+        <div id="inputApellido">
+            <label for="apellido"><h4>Apellido:</h4></label>
+            <input type="text" id="apellido" name="apellido" placeholder="Escribe tu Apellido" class="" >
+            <div class="feedback"></div>
+        </div>
+        <div id="inputDate">
+            <label for="nac"><h4>Fecha de Nacimiento:</h4></label>
+            <input type="date" id="nac" name="nac" class="" >
+            <div class="feedback"></div>
+        </div>
+        <div id="inputEmail">
+            <label for="email"><h4>Correo Electronico:</h4></label>
+            <input type="email" id="email" name="email" placeholder="E-mail @misena" class="" required>
+            <div class="feedback"></div>
+        </div>
+        <div id="inputPass">
+            <label for="pass"><h4>Contraseña:</h4></label>
+            <input type="password" id="pass" name="pass" class="" required>
+            <div class="feedback"></div>
+        </div>
+        <div id="inputCPass">
+            <label for="Cpass"><h4>Comprobar contraseña:</h4></label>
+            <input type="password" id="Cpass" name="Cpass" class="" required>
+            <div class="feedback"></div>
+        </div>
+        <br>
+        <br>
+        <div class="btn-group">
+            <button type="button" class="open-modal" data-open="modal1">Ver Terminos y Condiciones</button>
+        </div>
+          
+          <div class="modal" id="modal1" data-animation="slideInOutLeft">
+            <div class="modal-dialog">
+              <header class="modal-header">
+                TERMINOS Y CONDICIONES
+                <button class="close-modal" aria-label="close modal" data-close>
+                  ✕  
+                </button>
+              </header>
+              <section class="modal-content">
+                <p><strong>Presiona para aceptar:</strong></p>
+                <input type="checkbox" id="TyC" name="TyC" p> Aceptas Correos con ofertas para ti</p>
+                <input type="checkbox" id="TyC" name="TyC" p> Aceptas que guardemos tu informacion</p>
+                <input type="checkbox" id="TyC" name="TyC" p> Aceptas que te gustan las gomitas</p>
+                <input type="checkbox" id="TyC" name="TyC" p> Aceptas que te gusta la Coca-Cola</p>
+                <input type="checkbox" id="TyC" name="TyC" p> Aceptas que te gusta el Cafe</p>
+                <br>
+
+              </section>
+              <footer class="modal-footer">
+                Gracias por aceptar nuestros Terminos ❤❤❤
+              </footer>
+            </div>
+          </div>
+
+          <br>
+          
+          <button class="btn_sccss1">Registrarse</button>
+          
+          <button class="btn_sccss2"><a href="index.html">Regresar</a></button>
+    </form>
+    <script type="text/JavaScript" src="js/Reto7.js"></script>
+</body>
+</html>
